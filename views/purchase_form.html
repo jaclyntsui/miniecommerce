@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block title%}Miniecommerce - Purchase Form{% endblock%}
+
+{% block content%}
+<div class="container">
+	<div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="well well-sm">
+          <form class="form-horizontal" action="" method="post">
+          <fieldset>
+            <legend class="text-center">Purchase Form</legend>
+
+            <!-- Name input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="name">Name</label>
+              <div class="col-md-9">
+                <input id="name" name="name" type="text" placeholder="Full name" class="form-control">
+              </div>
+            </div>
+
+            <!-- Shipping Address -->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="message">Shipping Address</label>
+              <div class="col-md-9">
+                <textarea class="form-control" id="message" name="address" placeholder="Please enter your address here" rows="5"></textarea>
+              </div>
+            </div>
+
+            <!-- Shipping methods-->
+            <div class="form-group">
+            	 <label class="col-md-3 control-label" for="name">Shipping Method</label>
+            	               <div class="col-md-9">
+            	               	<select id="subject" name="method" class="form-control" required="required">
+								                                <option value="na" selected="">Choose One:</option>
+								                                <option value="service">Overnight</option>
+								                                <option value="suggestions">2 Day Air</option>
+								                                <option value="product">Standard</option>
+								              </select>
+															</div>
+            </div>
+
+        <div class='col-md-4'></div>
+        <div class='col-md-4'>
+          <script src='https://js.stripe.com/v2/' type='text/javascript'></script>
+          <form accept-charset="UTF-8" action="/" class="require-validation" data-cc-on-file="false" data-stripe-publishable-key="pk_bQQaTxnaZlzv4FnnuZ28LFHccVSaj" id="payment-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓" /><input name="_method" type="hidden" value="PUT" /><input name="authenticity_token" type="hidden" value="qLZ9cScer7ZxqulsUWazw4x3cSEzv899SP/7ThPCOV8=" /></div>
+            <div class='form-row'>
+              <div class='col-xs-12 form-group required'>
+                <label class='control-label'>Name on Card</label>
+                <input class='form-control' size='4' type='text'>
+              </div>
+            </div>
+            <div class='form-row'>
+              <div class='col-xs-12 form-group card required'>
+                <label class='control-label'>Card Number</label>
+                <input autocomplete='off' class='form-control card-number' size='20' type='text' name='card_number'>
+              </div>
+            </div>
+            <div class='form-row'>
+              <div class='col-xs-4 form-group cvc required'>
+                <label class='control-label'>CVC</label>
+                <input autocomplete='off' class='form-control card-cvc' placeholder='ex. 311' size='4' type='text'>
+              </div>
+              <div class='col-xs-4 form-group expiration required'>
+                <label class='control-label'>Expiration</label>
+                <input class='form-control card-expiry-month' placeholder='MM' size='2' type='text'>
+              </div>
+              <div class='col-xs-4 form-group expiration required'>
+                <label class='control-label'> </label>
+                <input class='form-control card-expiry-year' placeholder='YYYY' size='4' type='text'>
+              </div>
+
+
+            <!-- Credit card info-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="name">Credit card</label>
+              <div class="col-md-9">
+                <input id="name" name="name" type="text" placeholder="Credit card" class="form-control">
+              </div>
+            </div>
+
+            <!-- Form actions -->
+            <div class="form-group">
+              <div class="col-md-12 text-right">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+          </form>
+        </div>
+      </div>
+	</div>
+</div>
+{% endblock %}
