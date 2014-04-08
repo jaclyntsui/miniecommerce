@@ -18,6 +18,13 @@
                 <input id="name" name="name" type="text" placeholder="Full name" class="form-control">
               </div>
             </div>
+            	<!-- Email input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="email">Email</label>
+	              <div class="col-md-9">
+	                <input id="email" name="email" type="text" placeholder="Email" class="form-control">
+	              </div>
+            </div>
 
             <!-- Shipping Address -->
             <div class="form-group">
@@ -40,49 +47,74 @@
 															</div>
             </div>
 
-        <div class='col-md-4'></div>
-        <div class='col-md-4'>
-          <script src='https://js.stripe.com/v2/' type='text/javascript'></script>
-          <form accept-charset="UTF-8" action="/" class="require-validation" data-cc-on-file="false" data-stripe-publishable-key="pk_bQQaTxnaZlzv4FnnuZ28LFHccVSaj" id="payment-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓" /><input name="_method" type="hidden" value="PUT" /><input name="authenticity_token" type="hidden" value="qLZ9cScer7ZxqulsUWazw4x3cSEzv899SP/7ThPCOV8=" /></div>
-            <div class='form-row'>
-              <div class='col-xs-12 form-group required'>
-                <label class='control-label'>Name on Card</label>
-                <input class='form-control' size='4' type='text'>
-              </div>
-            </div>
-            <div class='form-row'>
-              <div class='col-xs-12 form-group card required'>
-                <label class='control-label'>Card Number</label>
-                <input autocomplete='off' class='form-control card-number' size='20' type='text' name='card_number'>
-              </div>
-            </div>
-            <div class='form-row'>
-              <div class='col-xs-4 form-group cvc required'>
-                <label class='control-label'>CVC</label>
-                <input autocomplete='off' class='form-control card-cvc' placeholder='ex. 311' size='4' type='text'>
-              </div>
-              <div class='col-xs-4 form-group expiration required'>
-                <label class='control-label'>Expiration</label>
-                <input class='form-control card-expiry-month' placeholder='MM' size='2' type='text'>
-              </div>
-              <div class='col-xs-4 form-group expiration required'>
-                <label class='control-label'> </label>
-                <input class='form-control card-expiry-year' placeholder='YYYY' size='4' type='text'>
-              </div>
-
-
             <!-- Credit card info-->
-            <div class="form-group">
-              <label class="col-md-3 control-label" for="name">Credit card</label>
+						<div class="form-group">
+              <label class="col-md-3 control-label" for="cardholder">Card Holder's Name</label>
               <div class="col-md-9">
-                <input id="name" name="name" type="text" placeholder="Credit card" class="form-control">
+                <input id="name" name="name" type="text" placeholder="Name as seen on card" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="cardnumber">Card Number</label>
+              <div class="col-md-9">
+                <input id="name" name="name" type="text" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group">
+            	 <label class="col-md-3 control-label" for="name">Card Expiry Date</label>
+            	               <div class="col-md-6">
+            	               	<select id="subject" name="method" class="form-control" required="required">
+								                                	<option value = "1">January</option>
+																									<option value = "2">February</option>
+																									<option value = "3">March</option>
+																									<option value = "4">April</option>
+																									<option value = "5">May</option>
+																									<option value = "6">June</option>
+																									<option value = "7">July</option>
+																									<option value = "8">August</option>
+																									<option value = "9">September</option>
+																									<option value = "10">October</option>
+																									<option value = "11">November</option>
+																									<option value = "12">December</option>
+								              </select>
+															</div>
+															<div class="col-md-3">
+																<select id="subject" name="method" class="form-control" required="required">
+																	<option>2014</option>
+							                    <option>2015</option>
+							                    <option>2016</option>
+							                    <option>2017</option>
+							                    <option>2018</option>
+							                    <option>2019</option>
+							                    <option>2020</option>
+							                    <option>2021</option>
+							                    <option>2022</option>
+							                    <option>2023</option>
+							                    <option>2024</option>
+							                    <option>2025</option>
+							                    <option>2026</option>
+							                    <option>2027</option>
+							                    <option>2028</option>
+							                    <option>2029</option>
+							                    <option>2030</option>
+							                    <option>2031</option>
+																</select>
+															</div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="cvv">CVV</label>
+              <div class="col-md-2">
+                <input id="cvv" name="cvv" type="text" class="form-control">
               </div>
             </div>
 
             <!-- Form actions -->
             <div class="form-group">
-              <div class="col-md-12 text-right">
-                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+              <div class="col-md-12 text-center">
+                <a href="/item_list"></a><button type="submit" class="btn btn-primary btn-lg">Submit</button>
               </div>
             </div>
           </fieldset>
