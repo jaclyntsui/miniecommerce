@@ -7,11 +7,16 @@ var Schema = mongoose.Schema;
 
 var purchaseSchema = new Schema({
 	name: String,
+	email: String,
+	date_purchase: Date,
 	address: String,
-	method: String,
-	card_number: Number
+	shipping_method: String,
+	card_number: Number,
+	card_expiration: String
 })
 
-Puchase = mongoose.model('Purchase', purchaseSchema);
+var Purchase = mongoose.model('Purchase', purchaseSchema);
 
-exports.Purchase = Purchase;
+module.exports = {
+	'Purchase': Purchase
+};
